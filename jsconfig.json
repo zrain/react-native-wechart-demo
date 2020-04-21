@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": ["src/*"],
+            "@src": ["src"],
+            "@assets/*": ["src/assets/*"],
+            "@assets": ["src/assets"],
+            "@components/*": ["src/components/*"],
+            "@components": ["src/components"],
+            "@constants/*": ["src/constants/*"],
+            "@constants": ["src/constants"],
+            "@locales/*": ["src/locales/*"],
+            "@locales": ["src/locales"],
+            "@router/*": ["src/router/*"],
+            "@router": ["src/router"],
+            "@services/*": ["src/services/*"],
+            "@services": ["src/services"],
+            "@store/*": ["src/store/*"],
+            "@store": ["src/store"],
+            "@views/*": ["src/views/*"],
+            "@views": ["src/views"],
+            "@screens/*": ["src/screens/*"],
+            "@screens": ["src/screens"]
+        }
+    },
+    "exclude": [".*", "dist", "dist*", "node_modules"]
+}
