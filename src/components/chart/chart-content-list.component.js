@@ -9,6 +9,7 @@ import {
     ScrollView,
     TouchableWithoutFeedback
 } from 'react-native';
+import { ChartContentItemComponent } from '@components';
 
 const ChartContentListComponent = ({ data }) => {
     const cancelFocusPressHandler = () => {
@@ -66,7 +67,9 @@ const ChartContentListComponent = ({ data }) => {
                 ref={scrollViewRef}
             >
                 {data.map(item => {
-                    return renderItem(item);
+                    return (
+                        <ChartContentItemComponent data={item} key={item.id} />
+                    );
                 })}
             </ScrollView>
         </TouchableWithoutFeedback>

@@ -4,11 +4,13 @@ import AvatarObj from '@assets/avatar';
 const users = [
     {
         name: Mock.Random.cname(),
-        avatarUri: AvatarObj[Mock.Random.integer(1, 50)]
+        avatarUri: AvatarObj[Mock.Random.integer(1, 50)],
+        isSelf: true
     },
     {
         name: Mock.Random.cname(),
-        avatarUri: AvatarObj[Mock.Random.integer(1, 50)]
+        avatarUri: AvatarObj[Mock.Random.integer(1, 50)],
+        isSelf: false
     }
 ];
 
@@ -18,7 +20,6 @@ const data = Mock.mock({
             ['id|+1']: 1,
             ['content']: () => Mock.Random.cparagraph(1, 3),
             ['date']: () => Mock.Random.date(),
-            ['isSelf|1']: true,
             ['userInfo|1']: users
         }
     ]

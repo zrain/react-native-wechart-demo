@@ -10,7 +10,9 @@ import { useNavigation } from '@react-navigation/native';
 
 const ChartItemComponent = ({ data }) => {
     const { name, date, avatarUri } = data;
+
     const navigation = useNavigation();
+
     const [active, setActive] = useState(false);
 
     const wrapperStyle = active

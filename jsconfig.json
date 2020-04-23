@@ -27,5 +27,6 @@
             "@mock": ["src/mock"]
         }
     },
-    "exclude": [".*", "dist", "dist*", "node_modules"]
+    "include": ["src/**/*"],
+    "exclude": [".*", "dist", "dist*", "node_modules", "android", "ios"]
 }

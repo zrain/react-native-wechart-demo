@@ -7,6 +7,10 @@ export {
 } from './chart/chart-content-list.component.js';
 
 export {
+    default as ChartContentItemComponent
+} from './chart/chart-content-item.component.js';
+
+export {
     default as ChartInputComponent
 } from './chart/chart-input.component.js';
 

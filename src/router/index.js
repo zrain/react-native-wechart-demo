@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { ChartScreen } from '@screens';
+import { ChartScreen, ProfileScreen } from '@screens';
 import TestKavScreen from '@screens/test-kav.screen.js';
 import { BackIconComponent } from '@components';
 import HomeTabs from './home-tabs.js';
@@ -48,6 +48,11 @@ const getChartScreenHeaderTitle = route => {
     return name;
 };
 
+const getProfileScreenHeaderTitle = route => {
+    const { name = '' } = route?.params?.data?.userInfo;
+    return name;
+};
+
 const router = () => {
     return (
         <NavigationContainer>
@@ -65,6 +70,20 @@ const router = () => {
                     component={ChartScreen}
                     options={({ route }) => ({
                         headerTitle: getChartScreenHeaderTitle(route),
+                        headerBackTitleVisible: false,
+                        headerLeft: () => {
+                            return <BackIconComponent />;
+                        },
+                        headerStyle: {
+                            backgroundColor: '#ededed'
+                        }
+                    })}
+                />
+                <AppStack.Screen
+                    name="/profile"
+                    component={ProfileScreen}
+                    options={({ route }) => ({
+                        headerTitle: getProfileScreenHeaderTitle(route),
                         headerBackTitleVisible: false,
                         headerLeft: () => {
                             return <BackIconComponent />;
