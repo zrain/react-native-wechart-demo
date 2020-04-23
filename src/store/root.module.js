@@ -1,5 +1,4 @@
-import AppModule from './app.module.js';
-import ScreenModule from './screen.module.js';
+import AppModule from './module/app.module.js';
 
 // store.[*]
 export default {
@@ -9,7 +8,6 @@ export default {
     reducers: {},
     actions: {},
     modules: {
-        app: AppModule,
-        screen: ScreenModule
+        app: AppModule
     }
 };

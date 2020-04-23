@@ -22,7 +22,9 @@
             "@views/*": ["src/views/*"],
             "@views": ["src/views"],
             "@screens/*": ["src/screens/*"],
-            "@screens": ["src/screens"]
+            "@screens": ["src/screens"],
+            "@mock/*": ["src/mock/*"],
+            "@mock": ["src/mock"]
         }
     },
     "exclude": [".*", "dist", "dist*", "node_modules"]

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { connect } from '@yuandana/react-redux-x';
 import { ChartScreen } from '@screens';
+import TestKavScreen from '@screens/test-kav.screen.js';
 import { BackIconComponent } from '@components';
 import HomeTabs from './home-tabs.js';
 
@@ -74,13 +74,10 @@ const router = () => {
                         }
                     })}
                 />
+                <AppStack.Screen name="/test-kav" component={TestKavScreen} />
             </AppStack.Navigator>
         </NavigationContainer>
     );
 };
 
-export default connect(state => {
-    return {
-        chartScreenActive: state.screen.chart
-    };
-})(router);
+export default router;

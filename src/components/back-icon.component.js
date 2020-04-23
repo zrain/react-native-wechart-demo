@@ -21,7 +21,12 @@ const BackIconComponent = () => {
 
 const styles = StyleSheet.create({
     wrapper: {
-        paddingLeft: 12
+        flex: 1,
+        paddingHorizontal: 12,
+        justifyContent: 'center'
+    },
+    backIcon: {
+        flex: 1
     }
 });
 

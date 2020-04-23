@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { StyleSheet, VirtualizedList } from 'react-native';
-import ChartItem from './chart-item.component.js';
+import ChartViewItem from './chart-view-item.component.js';
 
-const ChartListComponent = ({ data: listData = [] }) => {
-    const getItemCount = data => {
-        return data.length;
+const ChartListComponent = ({ data }) => {
+    const getItemCount = list => {
+        return list.length;
     };
 
-    const getItem = (data, index) => {
-        const itemData = data[index];
+    const getItem = (list, index) => {
+        const itemData = list[index];
         return itemData;
     };
 
@@ -19,9 +19,9 @@ const ChartListComponent = ({ data: listData = [] }) => {
     return (
         <VirtualizedList
             style={styles.chartList}
-            data={listData}
+            data={data}
             initialNumToRender={4}
-            renderItem={({ item }) => <ChartItem data={item} />}
+            renderItem={({ item }) => <ChartViewItem data={item} />}
             keyExtractor={keyExtractor}
             getItemCount={getItemCount}
             getItem={getItem}

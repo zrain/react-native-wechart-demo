@@ -7,14 +7,11 @@ import {
     TouchableWithoutFeedback
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import AvatarList from '@assets/avatar/index.js';
 
 const ChartItemComponent = ({ data }) => {
-    const { name, id, date } = data;
+    const { name, date, avatarUri } = data;
     const navigation = useNavigation();
     const [active, setActive] = useState(false);
-
-    const imgSource = AvatarList[id];
 
     const wrapperStyle = active
         ? [styles.wrapper, styles.activeWrapper]
@@ -43,7 +40,7 @@ const ChartItemComponent = ({ data }) => {
         >
             <View style={wrapperStyle}>
                 <View style={styles.imgWrapper}>
-                    <Image style={styles.img} source={imgSource} />
+                    <Image style={styles.img} source={avatarUri} />
                 </View>
                 <View style={styles.content}>
                     <View>

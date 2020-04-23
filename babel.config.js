@@ -22,7 +22,8 @@ module.exports = {
                     '@components': './src/components',
                     '@router': './src/router',
                     '@screens': './src/screens',
-                    '@store': './src/store'
+                    '@store': './src/store',
+                    '@mock': './src/mock'
                 }
             }
         ]

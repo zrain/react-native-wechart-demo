@@ -1,6 +1,7 @@
 import { __DO_NOT_USE__ActionTypes } from 'redux';
 
 import HomeModule from './home.module.js';
+import ChartModule from './chart.module.js';
 
 // store.app.[*]
 export default {
@@ -23,6 +24,7 @@ export default {
         }
     },
     modules: {
-        HomeModule
+        HomeModule,
+        ChartModule
     }
 };

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { connect } from '@yuandana/react-redux-x';
-import { ChartListComponent } from '@components';
+import { ChartViewListComponent } from '@components';
 
-const HomeScreen = ({ chartList }) => {
+const HomeScreen = ({ viewList }) => {
     return (
         <View style={styles.wrapper}>
-            <ChartListComponent data={chartList} />
+            <ChartViewListComponent data={viewList} />
         </View>
     );
 };
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
 
 export default connect(state => {
     return {
-        chartList: state.app.HomeModule.chartList
+        viewList: state.app.ChartModule.viewList
     };
 })(HomeScreen);

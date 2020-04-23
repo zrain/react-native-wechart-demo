@@ -9,7 +9,7 @@ const HomeStackScreen = () => {
     return (
         <HomeTab.Navigator>
             <HomeTab.Screen
-                name="/home/wechart"
+                name="/home/chart"
                 component={HomeScreen}
                 options={{
                     title: '微信',
@@ -49,27 +49,6 @@ const HomeStackScreen = () => {
                 }}
             />
         </HomeTab.Navigator>
-        // <HomeStack.Navigator>
-        //     <HomeStack.Screen
-        //         name="/home/index"
-        //         component={HomeScreen}
-        //         options={{
-        //             title: '微信',
-        //             headerStyle: {
-        //                 backgroundColor: '#ededed',
-        //                 borderBottomWidth: 0,
-        //                 borderColor: 'transparent'
-        //             }
-        //         }}
-        //     />
-        //     {/* <HomeStack.Screen
-        //         name="/home/chart"
-        //         component={ChartScreen}
-        //         options={{
-        //             title: '聊天'
-        //         }}
-        //     /> */}
-        // </HomeStack.Navigator>
     );
 };
 
