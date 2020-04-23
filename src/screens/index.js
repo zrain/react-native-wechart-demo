@@ -9,3 +9,5 @@ export { default as FindScreen } from './find.screen.js';
 export { default as MineScreen } from './mine.screen.js';
 
 export { default as ProfileScreen } from './profile.screen.js';
+
+export { default as ComputerControlScreen } from './computer-control.screen.js';

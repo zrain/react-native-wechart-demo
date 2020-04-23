@@ -8,7 +8,7 @@ const FindScreen = () => {
         <View style={styles.container}>
             <TouchableWithoutFeedback
                 onPress={() => {
-                    navigation.navigate('/test-kav');
+                    navigation.navigate('/computer-control');
                 }}
             >
                 <Text>测试-KeyboardAvoidingComponent</Text>
